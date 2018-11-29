@@ -11,12 +11,12 @@ Public Class Application
         
         'The main game loop
         While BoardIsFull(squares) = False
-        
             System.Console.Clear()
             
             'Write the Board
             WriteBoard(squares)
             
+            'User Plays
             System.Console.WriteLine("You are 'X', and the Computer is 'O'.")
             System.Console.WriteLine("Please enter the number of the square you would like to play on:")
             
@@ -30,13 +30,14 @@ Public Class Application
                     System.Console.WriteLine("Invalid Square!")
                 End If
             
-            System.Console.WriteLine($"You played on square {playedSquare}")
+                System.Console.WriteLine($"You played on square {playedSquare}")
             Catch
                 System.Console.WriteLine("Invalid square - you must enter a number between 1 and 9!")
                 System.Console.WriteLine("Press Enter to try again >>")
                 System.Console.ReadLine()
             End Try 
             
+            'Computer plays
             
             
         End While
