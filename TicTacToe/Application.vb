@@ -165,7 +165,7 @@ Public Class Application
         For i As Integer = 0 To 7
             squaresPlayedInARow = 0
             For j As Integer = 0 To 2
-                currentSquare = winningLines(i, j) - 1
+                currentSquare = winningLines(i, j) - 1 'Subtract 1 to find the correct index
                 If squares(currentSquare) = playerSymbol Then
                     squaresPlayedInARow += 1
                 End If    
